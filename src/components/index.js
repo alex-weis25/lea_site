@@ -4,3 +4,4 @@ export { default as Articles } from './articles';
 export { default as Header } from './header';
 export { default as Photos } from './photos';
 export { default as Footer } from './footer';
+export { default as Media } from './media';

@@ -16,6 +16,15 @@ class Footer extends Component {
   render(){
     return (
       <div id="footer-root">
+      </div>
+    )
+  }
+}
+
+export default Footer;
+
+/* STORE
+<div id="footer-root">
         <div id="footer-wrapper">
         <a href="mailto:leaceas@gmail.com">
         <img src={email} className="footer-img" alt='email-link' />
@@ -32,8 +41,4 @@ class Footer extends Component {
           </a>
         </div>
       </div>
-    )
-  }
-}
-
-export default Footer;
+*/

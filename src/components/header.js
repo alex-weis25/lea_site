@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import twitter from '../assets/twitter.svg';
-import linkedin from '../assets/linkedin.svg';
-import instagram from '../assets/insta2.svg';
-import email from '../assets/email.svg';
+import { Media } from './index';
 
 class Header extends Component {
   constructor(props){
@@ -15,13 +12,18 @@ class Header extends Component {
   render(){
     return (
       <div id="header-root">
-        <div id="header-left" onClick={() => {this.props.setView('Landing')}}>
-          Lea Ceas...
+        <div id="header-left">
+          <Media />
         </div>
         <div id="header-right">
-          <div className="header-text" onClick={() => {this.props.setView('AboutMe')}}>About Lea</div>
-          <div className="header-text" onClick={() => {this.props.setView('Articles')}}>Articles</div>
-          <div className="header-text" onClick={() => {this.props.setView('Photos')}}>Photos</div>
+          <div id="header-title" onClick={() => {this.props.setView('Landing')}}>
+            Lea Carolina Ceasrine
+          </div>
+          <div id="header-content-wrapper">
+            <div className="header-text" onClick={() => {this.props.setView('AboutMe')}}>About Lea</div>
+            <div className="header-text" onClick={() => {this.props.setView('Articles')}}>Articles</div>
+            <div className="header-text" onClick={() => {this.props.setView('Photos')}}>Photos</div>
+          </div>
         </div>
       </div>
     )
