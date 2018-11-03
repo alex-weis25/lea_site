@@ -29,16 +29,17 @@ class Main extends Component {
   }
 
   setView = view => {
-    console.log('view: ' + view);
     this.setState({view});
   }
 
   render(){
     return (
       <div id="main-root">
-        <Header setView={this.setView} />
-        <div id="content">
-          {this.selectedView()}
+      <div id="content">
+          <Header setView={this.setView} />
+          <AboutMe />
+          <Articles />
+          <Photos />
         </div>
         <Footer />
       </div>

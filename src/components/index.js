@@ -5,3 +5,4 @@ export { default as Header } from './header';
 export { default as Photos } from './photos';
 export { default as Footer } from './footer';
 export { default as Media } from './media';
+export { default as SectionHeader } from './sectionHeader';

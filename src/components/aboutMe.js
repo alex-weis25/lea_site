@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { SectionHeader } from './index';
 
 class AboutMe extends Component {
   render() {
     return (
-      <div className="About-me">
-        <div>About</div>
+      <div id="AboutMe" className="section-wrapper">
+        <SectionHeader text="About Me" />
+        <div className='section-text'>
+          Leba deeba
+        </div>
       </div>
     );
   }

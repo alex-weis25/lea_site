@@ -20,14 +20,47 @@ class Header extends Component {
             Lea Carolina Ceasrine
           </div>
           <div id="header-content-wrapper">
-            <div className="header-text" onClick={() => {this.props.setView('AboutMe')}}>About Lea</div>
-            <div className="header-text" onClick={() => {this.props.setView('Articles')}}>Articles</div>
-            <div className="header-text" onClick={() => {this.props.setView('Photos')}}>Photos</div>
+            <div className="header-text" onClick={() => initScroll("AboutMe")}>About Lea</div>
+            <div className="header-text" onClick={() => initScroll("Articles")}>Articles</div>
+            <div className="header-text" onClick={() => initScroll("Photos")}>Photos</div>
           </div>
         </div>
       </div>
     )
   }
 }
+
+let marginY = 0;
+let destination = 0;
+let speed = 20;
+let scroller = null;
+
+const initScroll = elementId => {
+  destination = document.getElementById(elementId).offsetTop;
+  scroller = setTimeout(() => {
+    initScroll(elementId);
+  }, 1);
+  marginY += speed;
+  if (marginY >= destination) {
+    clearTimeout(scroller);
+    destination = 0;
+    marginY = 0;
+  } else {
+    window.scroll(0, marginY);
+  }
+};
+
+const toTop = elementId => {
+  destination = document.getElementById(elementId).offsetTop;
+  scroller = setTimeout(() => {
+    initScroll(elementId);
+  }, 1);
+  marginY -= speed;
+  if (marginY <= 0) {
+    clearTimeout(scroller);
+  }
+  window.scroll(0, marginY);
+};
+
 
 export default Header;
