@@ -10,8 +10,8 @@ class SectionHeader extends Component {
 
   render(){
     return (
-      <div id="sectionHeader-wrapper">
-        <div id="sectionHeader-text">
+      <div id="section-header-wrapper">
+        <div id="section-header-text">
           {this.props.text}
         </div>
       </div>
